@@ -1,0 +1,4 @@
+streamlit
+numerize.numerize
+pandas
+altair
