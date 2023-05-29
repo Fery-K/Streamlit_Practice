@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import altair as alt
-import numerize.numerize as num
+from numerize import numerize as num
 
 st.set_page_config(page_title=
                    "Belajar Streamlit Lagi", layout="wide")
