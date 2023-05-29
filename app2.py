@@ -67,9 +67,10 @@ with mx_gpm:
               value=f'{curr_gpm:.2f}%',
               delta=f'{gpm_diff_pct:.2f}%')
 
-st.header("Select Argument")
-freq_select = st.selectbox("Time Unit", ['Harian', 'Bulanan'])
-agg_select = st.selectbox("Aggregate", ['Jumlah', 'Rata-Rata'])
+with st.sidebar:
+    st.title("Select Argument")
+    freq_select = st.selectbox("Time Unit", ['Harian', 'Bulanan'])
+    agg_select = st.selectbox("Aggregate", ['Jumlah', 'Rata-Rata'])
 
 time_unit = {
     'Harian': 'yearmonthdate',
