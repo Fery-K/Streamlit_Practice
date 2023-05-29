@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import altair as alt
-from numerize import numerize as num
+from numerize import numerize
 
 st.set_page_config(page_title=
                    "Belajar Streamlit Lagi", layout="wide")
@@ -37,7 +37,7 @@ with mx_sales:
     sales_diff_pct = 100 * (curr_sales - prev_sales) / prev_sales
 
     st.metric(label="Sales",
-              value=num.numerize(curr_sales),
+              value=numerize.numerize(curr_sales),
               delta=f'{sales_diff_pct:.2f}%')
 
 with mx_order:
